@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(19, 17, 17, 0.74);
+}
+
+a:hover {
+  cursor: pointer;
+  color: rgba(97, 93, 93, 0.979);
+}
+
+p {
+  margin-bottom: 10px;
+  color: rgba(37, 36, 36, 0.904);
+}
+
+ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+li {
+  margin-left: 15px;
+  color: rgba(37, 36, 36, 0.904);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  margin-top: 10%;
+
+  &__persone {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  &__delimiter {
+    height: 20px;
+    width: 250px;
+    background-color: rgba(97, 93, 93, 0.192);
+  }
+
+  &__name-persone {
+    font-weight: 400;
+    font-size: 30px;
+  }
+
+  &__avatar-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    transform: rotate(35deg);
+  }
+}
+
+.section-information {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 50px;
+  gap: 100px;
+
+  &__block {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2px;
+    width: 65px;
+    height: 65px;
+    border-radius: 100px;
+    background-color: rgba(97, 93, 93, 0.192);
+    flex-shrink: 0;
+  }
+
+  &__icon-dartc {
+    width: 35px;
+    height: 35px;
+  }
+
+  &__icon-contact {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__description {
+    margin-top: 10px;
+  }
+
+  &__description-position {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__description-delimiter {
+    height: 10px;
+    width: 200px;
+    background-color: rgba(97, 93, 93, 0.192);
+  }
+
+  &__description-title {
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(4, 97, 185, 0.993);
+  }
+
+  &__description-name,
+  &__description-jobTile {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(19, 17, 17);
+  }
+
+  &__description-names {
+    font-weight: 500;
+    color: rgb(24, 20, 20);
+  }
+
+  &__description-contactTitle {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 15px;
+    gap: 10px;
+  }
+
+  &__description-subtitle {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgba(97, 93, 93, 0.877);
+  }
+
+  &__description-subtitleProject {
+    color: rgb(88, 78, 78);
+  }
+}
+
+.contact {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(19, 17, 17);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 10px;
+  }
+
+  .header__persone {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header__delimiter {
+    width: 150px;
+  }
+
+  .header__name-persone {
+    font-size: 24px;
+  }
+
+  .section-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+
+    &__description-delimiter {
+      display: none;
+    }
+
+    &__block {
+      padding: 25px;
+    }
+  }
+
+  .section-information__icon {
+    display: none;
+  }
+
+  .section-information__icon-dartc {
+    width: 25px;
+    height: 25px;
+  }
+
+  .section-information__icon-contact {
+    width: 15px;
+    height: 15px;
+  }
+
+  .section-information__description-title {
+    font-size: 18px;
+  }
+
+  .section-information__description-name,
+  .section-information__description-jobTile {
+    font-size: 16px;
+  }
+
+  .section-information__description-subtitle,
+  .section-information__description-subtitleProject {
+    font-size: 14px;
+  }
+
+  .contact {
+    font-size: 16px;
+  }
+}
